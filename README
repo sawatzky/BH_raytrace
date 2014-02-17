@@ -1,0 +1,32 @@
+The Makefile contains the switches need to compile raytrace.
+Also see the source file ray.f
+
+First run raytrace with an input pile set up to output
+step by step positions of the particles tracked.
+e.g.
+> raytrace <pair.idt >output
+
+run getrays.pl to create files showing the tracks that
+can be read into a plotting program.
+This also creates a file with the coordinate transfer
+parameters into the world system.
+e.g.
+>getrays.pl <output
+
+run getsummary.pl to extract the focal plane location
+
+> get summary.pl <output
+
+run raytrace with a 46 ray bundle (see manual) to
+get the transfer matix elements
+e.g.
+> raytrace <pair-46.idt >output-46
+
+The code calres.pl will read the matrix elements from output-46
+and attempt to estimate the resolutions using parameters
+defined within the code.
+e.g.
+> calres.pl
+
+
+This description may be incomeplete!
